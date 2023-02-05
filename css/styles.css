@@ -214,7 +214,7 @@ img {
 .hero__img {
     width: 600px;
     height: 480px;
-    background-color: var(--brand-color);
+    background-color: #fff;
     background-image: url(../img/hero-img.jpg);
     background-repeat: no-repeat;
     background-position: right -120px center;
