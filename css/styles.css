@@ -97,7 +97,7 @@ img {
     background-color: #fff;
     padding-left: 165px;
     padding-top: 48px;
-    padding-bottom: 152px;
+    padding-bottom: 55px;
 }
 
 .site-header {
@@ -182,17 +182,21 @@ img {
 
 /* Hero styles */
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 30px;
+    display: block;
+    background-color: #fff;
+    background-image: url(../img/hero-bg.svg);
+    background-repeat: no-repeat;
+    background-position: left calc(50% + 350px) top 30px;
+    background-size: 650px 470px;
+    padding-bottom: 135px;
+
 }
 
 /* Hero info styles */
 .hero__info {
     width: 100%;
     max-width: 563px;
+    margin-top: 92px;
 }
 
 .hero__info__heading {
@@ -214,11 +218,7 @@ img {
 .hero__img {
     width: 600px;
     height: 480px;
-    background-color: #fff;
-    background-image: url(../img/hero-img.jpg);
-    background-repeat: no-repeat;
-    background-position: right -120px center;
-    background-size: cover;
+
 }
 
 /* Link form */
@@ -436,9 +436,6 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
-    .hero__img {
-        background-image: url(../img/hero-img@2x.jpg);
-    }
     .link-form {
     background-image: url(../img/link-bg@2x.jpg);
 }
