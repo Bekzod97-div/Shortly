@@ -85,7 +85,6 @@ img {
 
 /* Site header */
 .hero__container {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -97,7 +96,6 @@ img {
     background-color: #fff;
     padding-left: 165px;
     padding-top: 48px;
-    padding-bottom: 55px;
 }
 
 .site-header {
@@ -188,7 +186,7 @@ img {
     background-repeat: no-repeat;
     background-position: left calc(50% + 350px) top 30px;
     background-size: 650px 470px;
-    padding-bottom: 135px;
+    padding-bottom: 65px;
 
 }
 
@@ -218,11 +216,15 @@ img {
 .link-form {
     width: 100%;
     max-width: 1110px;
-    position: absolute;
     padding: 52px 64px;
-    bottom: 0;
-    right: 165px;
     transform: translateY(60%);
+}
+
+.link-form__input__wrapper {
+    width: 100%;
+    max-width: 770px;
+    margin-right: 24px;
+    position: relative;
 }
 .main-box {
     display: flex;
@@ -235,13 +237,15 @@ img {
 }
 
 .link-form__input {
+    display: block;
     width: 100%;
-    max-width: 770px;
     padding: 14px 32px;
-    margin-right: 24px;
     border-radius: 8px;
-    outline: transparent;
-    border: transparent;
+    outline: none;
+}
+.link-form__input:not(:placeholder-shown):invalid {
+    border: 3px solid #f46363 ;
+    color: #f46363;
 }
 
 .link-form__btn {
@@ -249,6 +253,22 @@ img {
     border: transparent;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.error-message {
+    display: none;
+}
+
+.link-form__input:not(:placeholder-shown):invalid ~ .error-message {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: calc(100% + 8px);
+    font-size: 16px;
+    line-height: 18px;
+    font-style: italic;
+    color: #f46363;
+    letter-spacing: 0.11px;
 }
 
 /* Statistics styles */

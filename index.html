@@ -50,7 +50,10 @@
         </section>
 
         <form class="link-form main-box">
-          <input class="link-form__input" type="text" name="link_text" id="long-link" placeholder="Shorten a link here..." aria-label="Shorten a link here...">
+          <div class="link-form__input__wrapper">
+            <input class="link-form__input" type="url" name="link_text" id="long-link" placeholder="Shorten a link here..." aria-label="Shorten a link here..." pattern="https://.*" size="30" required>
+            <p class="error-message">Please add a link</p>
+          </div>
           <button class="main-btn link-form__btn" id="shorten-button" type="button">Shorten It!</button>
         </form>
 
