@@ -1,10 +1,8 @@
-const shortenButton = document.getElementById("shorten-button");
-const longLinkInput = document.getElementById("long-link");
-const shortLinkOutput = document.getElementById("short-link");
+const elLinkForm = document.querySelector('.js__link-form');
+const elLinkResult = document.querySelector('.link-result');
 
-shortenButton.addEventListener("click", function() {
-  const longLink = longLinkInput.value;
-  const shortLink = `https://short.ly/${Math.random().toString(36).substring(7)}`;
+elLinkForm.addEventListener('submit', function(evt) {
+  evt.preventDefault();
 
-  shortLinkOutput.innerHTML = shortLink;
-});
+  elLinkResult.classList.add('link-result--open');
+})
