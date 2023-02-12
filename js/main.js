@@ -1,6 +1,7 @@
 const elLinkForm = document.querySelector('.js__link-form');
 const elLinkResult = document.querySelector('.link-result');
 const elFormContainer = document.querySelector('.form__container');
+const elShortLink = document.querySelector('.short-link')
 
 if(elLinkForm) {
   elLinkForm.addEventListener('submit', function(evt) {
@@ -18,6 +19,9 @@ if(elFormContainer) {
 
       // Change button
       evt.target.classList.add('short-link__copy-btn--copied');
+
+      // Copy short link to clipboard
+      navigator.clipboard.writeText(evt.target.previousElementSibling.textContent);
 
       // Reset button text and class after 1 second
       setTimeout(function () {
