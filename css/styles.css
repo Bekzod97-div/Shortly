@@ -323,6 +323,9 @@ img {
     padding: 10px 31px 7px;
     cursor: pointer;
 }
+.short-link__copy-btn--copied {
+    background-color: #3a3054;
+}
 
 
 /* Statistics styles */
